@@ -16,7 +16,7 @@ provider "google" {
 }
 
 # Cria uma VM no Google Cloud
-resource "google_compute_instance" "firstvm" {
+resource "google_compute_instance" "website" {
   name         = "website"
   machine_type = "n1-standard-1"
   zone         = "us-central1-a"
@@ -40,5 +40,5 @@ resource "google_compute_instance" "firstvm" {
 }
 # Retorna o IP da VM criada
 output "ip" {
-  value = google_compute_instance.firstvm.network_interface.0.access_config.0.nat_ip
+  value = google_compute_instance.website.network_interface.0.access_config.0.nat_ip
 }
