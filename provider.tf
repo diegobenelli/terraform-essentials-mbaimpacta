@@ -1,5 +1,5 @@
 # Configura o Provider Microsoft Azure
-provider "azure" {
+provider "azurerm" {
   version         = "=2.20.0"
 
   features {}
