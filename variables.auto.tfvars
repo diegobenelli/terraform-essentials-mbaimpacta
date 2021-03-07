@@ -1,2 +1,2 @@
-# Variáveis do GCP
-gcp_project   = "resonant-fiber-302322"
+﻿# Variáveis do GCP
+gcp_project   = "diegogouvea-mbaimpacta-turma04"
