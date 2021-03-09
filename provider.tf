@@ -1,5 +1,3 @@
-### DIEGO GOUVEA ESTEVE AQUI SETE DE MARCO ###
-
 #### SETUP GOOGLE ####
 terraform {
   required_providers {
@@ -10,6 +8,10 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "=2.49.0"
+    }
+    cloudflare = {
+      source = "cloudflare/cloudflare"
+      version = "2.18.0"
     }
   }
 }
@@ -25,3 +27,10 @@ provider "google" {
 provider "azurerm" {
   features {}
 }
+
+# Configura o Provider CloudFlare
+provider "cloudflare" {
+  email   = var.cloudflare_email
+  api_key = var.cloudflare_api_key
+}
+
